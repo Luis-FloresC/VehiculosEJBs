@@ -15,11 +15,12 @@ public class ClienteServicioCarro {
             iControladorCarroRemoto carroServiceRemote =
                     (iControladorCarroRemoto) jndi.lookup("java:global/gestionVehiculos-1.0/ControladorCarroRemoto");
             List<Carro> carros = carroServiceRemote.listCarro();
-
+            System.out.println("Lista de Vehiculos");
+            System.out.println("Vehiculos:[");
             for(Carro carro: carros){
                 System.out.println(carro.toString());
             }
-
+            System.out.println("]");
         } catch (NamingException e){
             e.printStackTrace(System.out);
         }

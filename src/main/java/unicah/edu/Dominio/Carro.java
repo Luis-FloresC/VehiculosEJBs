@@ -19,7 +19,7 @@ public class Carro  implements Serializable {
     {
         this.IdCarro = idCarro;
         this.Placa =placa;
-        this.Año = año;
+        setAño(año);
         this.Color = color;
         this.Marca = marca;
         this.Modelo = modelo;
@@ -36,19 +36,33 @@ public class Carro  implements Serializable {
     public String getMarca(){return  Marca;}
     public void setMarca(String marca){ this.Marca = marca; }
     public int getAño(){return  Año;}
-    public void setAño(int año){ this.Año = año; }
+    public void setAño(int año)
+    {
+        if(año < 1990)
+        {
+            this.Año = 1990;
+        }
+        else if(año > 2022)
+        {
+            this.Año = 2022;
+        }
+        else
+        {
+            this.Año = año;
+        }
+    }
 
     @Override
     public String toString()
     {
-        return "Vehiculo{" +
-                "idCarro=" + IdCarro +
-                ", Placa='" + Placa + '\'' +
-                ", Modelo='" + Modelo + '\'' +
-                ", Marca='" + Marca + '\'' +
-                ", Año='" + Año + '\'' +
-                ", Color='" + Color + '\'' +
-                '}';
+        return "{" +  '\n' +
+                "idCarro: " + IdCarro + "," + '\n' +
+                "Placa: " + Placa + "," +  '\n' +
+                "Modelo: " + Modelo +  "," + '\n' +
+                "Marca: " + Marca + "," + '\n' +
+                "Año: " + Año + "," + '\n' +
+                "Color: " + Color + '\n' +
+                "},";
     }
 
 }

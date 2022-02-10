@@ -12,6 +12,8 @@ public class ControladorCarroRemoto implements  iControladorCarroRemoto {
 
         List<Carro> listCarro = new ArrayList<>();
         listCarro.add(new Carro(1,"BAE 2345","Honda","Honda CRV","Negro",2015));
+        listCarro.add(new Carro(2,"AEH 2345","Toyota","Toyota 22R","Blanco",1989));
+        listCarro.add(new Carro(3,"OPL 2345","Honda","Civic Sedan 2022","Negro",2023));
         return listCarro;
     }
 
