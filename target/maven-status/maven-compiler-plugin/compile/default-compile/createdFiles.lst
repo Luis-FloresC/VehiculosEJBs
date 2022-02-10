@@ -1,3 +1,7 @@
-unicah\edu\gp\gestionvehiculos\HelloResource.class
+unicah\edu\Controlador\ControladorCarroRemoto.class
 unicah\edu\gp\gestionvehiculos\HelloApplication.class
 unicah\edu\gp\gestionvehiculos\HelloServlet.class
+unicah\edu\Dominio\Carro.class
+unicah\edu\Cliente\ClienteServicioCarro.class
+unicah\edu\gp\gestionvehiculos\HelloResource.class
+unicah\edu\Controlador\iControladorCarroRemoto.class
